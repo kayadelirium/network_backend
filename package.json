@@ -7,6 +7,7 @@
         "start": "tsc && node dist/app.js",
         "migrate-up": "npx sequelize-cli db:migrate",
         "migrate-down": "npx sequelize-cli db:migrate:undo",
+        "migrate-down-all": "npx sequelize-cli db:migrate:undo:all",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
