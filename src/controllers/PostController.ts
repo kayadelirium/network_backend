@@ -9,7 +9,7 @@ const PostController: IController = {
             const { text, date }: IPost = req.body;
             const { authorId } = req.query;
             if (!authorId) res.status(400).send();
-            const post = { text, date, authorId: Number(authorId) };
+            const post: IPost = { text, date, authorId: Number(authorId) };
             const result: IPost = await PostService.create(post);
             res.status(201).json(result);
         } catch (e) {

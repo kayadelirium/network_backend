@@ -35,6 +35,7 @@ export interface IMessage {
     text: string;
     date: Date;
     authorId: number;
+    adresseeId?: number;
     chatId: number;
 }
 

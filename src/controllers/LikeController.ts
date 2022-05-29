@@ -8,7 +8,7 @@ const LikeController: IController = {
         try {
             const { userId, postId } = req.query;
             if (!userId || !postId) res.status(400).send();
-            const like = { userId: Number(userId), postId: Number(postId) };
+            const like: ILike = { userId: Number(userId), postId: Number(postId) };
             const result: ILike = await LikeService.create(like);
             res.status(201).json(result);
         } catch (e) {

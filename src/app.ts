@@ -38,21 +38,16 @@ app.post("/posts", PostController.create);
 app.patch("/posts/:id", PostController.update);
 app.delete("/posts/:id", PostController.delete);
 
-app.post("/friends", FriendsController.create);
 app.get("/friends", FriendsController.readAll);
 app.get("/friends/:id", FriendsController.readOne);
-app.delete("/friends/:id", FriendsController.delete);
 
 app.post("/subscribers", SubscribersController.create);
 app.get("/subscribers", SubscribersController.readAll);
 app.get("/subscribers/:id", SubscribersController.readOne);
 app.delete("/subscribers/:id", SubscribersController.delete);
 
-app.post("/chats", ChatController.create);
 app.get("/chats", ChatController.readAll);
 app.get("/chats/:id", ChatController.readOne);
-app.patch("/chats/:id", ChatController.update);
-app.delete("/chats/:id", ChatController.delete);
 
 app.post("/messages", MessageController.create);
 app.get("/messages", MessageController.readAll);
