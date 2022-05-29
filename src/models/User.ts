@@ -1,11 +1,11 @@
-import { DataTypes, DateOnlyDataType, Model } from "sequelize";
+import { DataTypes, Model } from "sequelize";
 import { sequelize } from ".";
 
 export interface IUserAttributes {
     id?: number;
     login: string;
     password: string;
-    birthdate: DateOnlyDataType;
+    birthdate: Date;
     name: string;
     surname: string;
     createdAt?: Date;
@@ -42,7 +42,7 @@ const User = sequelize.define<IUserInstance>("User", {
     },
     birthdate: {
         allowNull: false,
-        type: DataTypes.DATEONLY,
+        type: DataTypes.DATE,
     },
 });
 
